@@ -1,0 +1,63 @@
+{
+    "src_folders": ["tests/specs/test"],
+    "output_folder": "tests/reports",
+    "custom_commands_path": "tests/commands",
+    "custom_assertions_path": ["tests/custom-assertions"],
+    "page_objects_path": "tests/pages",
+    "globals_path": "tests/globals.js",
+
+    "selenium": {
+        "start_process": false,
+        "server_path": "./bin/selenium-server-standalone-3.7.1.jar",
+        "log_path": "tests/reports",
+        "port": 4444,
+        "cli_args": {
+            "webdriver.chrome.driver1": "./bin/2.37/chromedriver.exe",
+            "webdriver.chrome.driver": "./bin/chromedriver"
+        }
+    },
+
+    "test_settings": {
+        "default": {
+            "launch_url": "http://www.thingjs.com",
+            "selenium_port": 4444,
+            "selenium_host1": "localhost",
+            "selenium_host": "localhosts",
+            "silent": true,
+            "screenshots": {
+                "enabled": false,
+                "path": ""
+            },
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "marionette": true,
+                "acceptSslCerts": true,
+                "chromeOptions": {
+                    "args": ["start-fullscreen"]
+                }
+            }
+        },
+
+        "chrome": {
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "marionette": true,
+                "acceptSslCerts": true,
+                "chromeOptions2": {
+                    "args": ["start-fullscreen"]
+                }
+            }
+        },
+
+        "phantomjs": {
+            "desiredCapabilities": {
+                "browserName": "phantomjs",
+                "marionette": true,
+                "acceptSslCerts": true,
+                "phantomjs.binary.path": "/git/phantomjs-for-linux",
+                "phantomjs.cli.args": ["--ignore-ssl-errors=true"],
+                "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36"
+            }
+        }
+    }
+}
