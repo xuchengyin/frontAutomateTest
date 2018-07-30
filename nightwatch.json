@@ -22,7 +22,7 @@
             "launch_url": "http://www.thingjs.com",
             "selenium_port": 4444,
             "selenium_host1": "localhost",
-            "selenium_host": "192.168.10.253",
+            "selenium_host": "47.93.212.144",
             "silent": true,
             "screenshots": {
                 "enabled": false,
