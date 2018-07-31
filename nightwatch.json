@@ -29,17 +29,12 @@
                 "path": ""
             },
             "desiredCapabilities": {
-                // "browserName": "chrome",
-                // "marionette": true,
-                // "acceptSslCerts": true,
-                // "chromeOptions": {
-                //     "args": ["start-fullscreen"]
-                // }
-                "browserName": "phantomjs",
+                "browserName": "chrome",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "phantomjs.binary.path": "./bin/phantomjs-for-linux",
-                "phantomjs.cli.args": ["--ignore-ssl-errors=true"]
+                "chromeOptions": {
+                    "args": ["start-fullscreen"]
+                }
             }
         },
 
@@ -59,7 +54,7 @@
                 "browserName": "phantomjs",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "phantomjs.binary.path": "/git/phantomjs-for-linux",
+                "phantomjs.binary.path": "./bin/phantomjs",
                 "phantomjs.cli.args": ["--ignore-ssl-errors=true"],
                 "phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.75 Safari/537.36"
             }
