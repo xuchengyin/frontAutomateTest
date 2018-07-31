@@ -54,7 +54,7 @@
                 "browserName": "phantomjs",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "phantomjs.binary.path": "/git/phantomjs-for-linux",
+                "phantomjs.binary.path": "./bin/phantomjs-for-linux",
                 "phantomjs.cli.args": ["--ignore-ssl-errors=true"]
             }
         }
