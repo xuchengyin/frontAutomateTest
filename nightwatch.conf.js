@@ -10,7 +10,6 @@ module.exports = (function(settings) {
         settings.test_settings.default.launch_url = "http://www.thingjs.com";
     } else {
         settings.test_settings.default.launch_url = "http://www.thingjs.com";
-        settings.test_settings.default.desiredCapabilities = settings.test_settings.phantomjs.desiredCapabilities;
     }
     return settings;
 })(require('./nightwatch.json'));
