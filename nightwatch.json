@@ -7,13 +7,13 @@
     "globals_path": "tests/globals.js",
 
     "selenium": {
-        "start_process": false,
+        "start_process": true,
         "server_path": "./bin/selenium-server-standalone-3.7.1.jar",
         "log_path": "tests/reports",
         "port": 4444,
         "cli_args": {
-            "webdriver.chrome.driver1": "./bin/2.37/chromedriver.exe",
-            "webdriver.chrome.driver": "./bin/chromedriver"
+            "webdriver.chrome.driver": "./bin/2.37/chromedriver.exe",
+            "webdriver.chrome.driver1": "./bin/chromedriver"
         }
     },
 
@@ -29,12 +29,11 @@
                 "path": ""
             },
             "desiredCapabilities": {
-                "browserName": "chrome",
+                "browserName": "phantomjs",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "chromeOptions": {
-                    "args": ["start-fullscreen"]
-                }
+                "phantomjs.binary.path": "./bin/phantomjs-for-linux",
+                "phantomjs.cli.args": ["--ignore-ssl-errors=true"]
             }
         },
 
@@ -54,7 +53,7 @@
                 "browserName": "phantomjs",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "phantomjs.binary.path": "./bin/phantomjs",
+                "phantomjs.binary.path": "./bin/phantomjs.exe",
                 "phantomjs.cli.args": ["--ignore-ssl-errors=true"]
             }
         }
