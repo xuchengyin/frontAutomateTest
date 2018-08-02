@@ -22,18 +22,19 @@
             "launch_url": "http://www.thingjs.com",
             "selenium_port": 4444,
             "selenium_host1": "localhost",
-            "selenium_host": "47.93.212.144",
+            "selenium_host": "localhost",
             "silent": true,
             "screenshots": {
                 "enabled": false,
                 "path": ""
             },
             "desiredCapabilities": {
-                "browserName": "phantomjs",
+                "browserName": "chrome",
                 "marionette": true,
                 "acceptSslCerts": true,
-                "phantomjs.binary.path": "./bin/phantomjs-for-linux",
-                "phantomjs.cli.args": ["--ignore-ssl-errors=true"]
+                "chromeOptions2": {
+                    "args": ["start-fullscreen"]
+                }
             }
         },
 
