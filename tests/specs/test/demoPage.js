@@ -11,7 +11,7 @@ module.exports = {
     },
     '@disabled': false,
     '切换到demo页面': (browser) => {
-        commonUtil.switchTab(browser, 'a', 'DEMO示例', '#_仓储管理', tabActiveSelector)
+        commonUtil.switchTab(browser, 'a', '解决方案', '#_仓储管理', tabActiveSelector)
             .assert.containsText(itemActiveSelector, '仓储管理')
     },
     '检查demo面板': (browser) => {
@@ -22,9 +22,12 @@ module.exports = {
             .assert.containsText('.btn-p.right.codelook', '代码查看')
     },
     '切换item': (browser) => {
-        commonUtil.switchTab(browser, 'a', '建筑导览', '#_建筑导览', itemActiveSelector)
-        commonUtil.switchTab(browser, 'a', '安防监控', '#_安防监控', itemActiveSelector)
-        commonUtil.switchTab(browser, 'a', '资产管理', '#_资产管理', itemActiveSelector)
-        commonUtil.switchTab(browser, 'a', '数据中心', '#_数据中心', itemActiveSelector)
+        var arr = ['建筑导览', '安防监控', '资产管理', '数据中心']
+        for (var i = 0; i < arr.length; i++) {
+            browser
+                .click("#content > div > div.toc > ul > li:nth-child(" + (i + 2) + "")
+                .assert.containsText(itemActiveSelector, arr[i])
+        }
+
     }
 }
