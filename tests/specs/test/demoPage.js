@@ -11,7 +11,7 @@ module.exports = {
     },
     '@disabled': false,
     '切换到demo页面': (browser) => {
-        commonUtil.switchTab(browser, 'a', '解决方案', '#_仓储管理', tabActiveSelector)
+        commonUtil.switchTab(browser, 'a', 'Demo示例', '#_仓储管理', tabActiveSelector)
             .assert.containsText(itemActiveSelector, '仓储管理')
     },
     '检查demo面板': (browser) => {

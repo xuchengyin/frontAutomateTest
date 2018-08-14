@@ -32,7 +32,7 @@ module.exports = {
             })
     },
     '检查导航栏': (browser) => {
-        var arr = ['首页', '解决方案', '文档', '价格', '工具', '价格', '在线开发', '贴吧', '登录']
+        var arr = ['首页', 'Demo示例', '文档', '价格', '工具', '在线开发', '论坛', '登录']
         for (var i = 0; i < arr.length; i++) {
             browser.assert.containsText(".collapse.navbar-collapse", arr[i]);
         }
@@ -50,21 +50,20 @@ module.exports = {
     '点击查看案例，跳转到demo页面': (browser) => {
         browser
             .clickElement('.btn-round-link.btn.btn-primary.btn-lg')
-            .assert.containsText('.nav-link.active', '解决方案')
+            .assert.containsText('.nav-link.active', 'Demo示例')
             .assert.elementPresent('.card-box-parent')
     },
-    '检查解决方案tab的下拉菜单': (browser) => {
+    '检查Demo示例tab的下拉菜单': (browser) => {
         var arr = ['仓储管理', '建筑导览', '安防监控', '资产管理', '数据中心']
-        commonUtil.moveToElementByXpath(browser, 'a', '解决方案', 5, 5)
+        commonUtil.moveToElementByXpath(browser, 'a', 'Demo示例', 5, 5)
             .pause(2000)
         for (var i = 0; i < arr.length; i++) {
             browser.assert.containsText(menu1, arr[i]);
         }
-        for (var i = 1; i < arr.length + 1; i++) {
-            browser
-                .click("#sub-site-nav > li.nav-menu.solution > ul > li:nth-child(" + i + ")")
-                .assert.containsText(itemActiveSelector, arr[i - 1])
-        }
+        browser
+            .click("#sub-site-nav > li.nav-menu.solution > ul > li:nth-child(3)")
+            .assert.containsText(itemActiveSelector, '安防监控')
+
     },
     '检查文档tab下拉菜单': (browser) => {
         var arr = ['教程', 'API', '常见问题']
