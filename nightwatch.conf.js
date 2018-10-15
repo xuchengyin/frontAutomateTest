@@ -7,9 +7,9 @@ module.exports = (function(settings) {
         settings.selenium.start_process = true;
         settings.selenium.cli_args['webdriver.chrome.driver'] = "./bin/2.37/chromedriver.exe";
         settings.test_settings.default.selenium_host = "localhost";
-        settings.test_settings.default.launch_url = "http://www.thingjs.com";
+        settings.test_settings.default.launch_url = "http://www.3dmmd.cn:8083";
     } else {
-        settings.test_settings.default.launch_url = "http://www.thingjs.com";
+        settings.test_settings.default.launch_url = "http://www.3dmmd.cn:8083";
     }
 
     return settings;

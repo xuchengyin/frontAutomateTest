@@ -20,4 +20,5 @@ module.exports = {
     btnCancel: '.btn.uDialog-btn-cancel',
     modalTitle: '.modal-title',
     windNotice: '.windows-notice p',
+    sceneBaseUrl: 'D:/ThingE2E/tests/specs/testData/'
 }

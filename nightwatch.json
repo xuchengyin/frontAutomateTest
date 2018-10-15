@@ -19,7 +19,7 @@
 
     "test_settings": {
         "default": {
-            "launch_url": "http://www.thingjs.com",
+            "launch_url": "http://www.3dmmd.cn:8083",
             "selenium_port": 4444,
             "selenium_host1": "localhost",
             "selenium_host": "localhost",
